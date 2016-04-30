@@ -1,0 +1,23 @@
+{
+  "name": "react-native-silent-switch",
+  "version": "0.0.1",
+  "description": "Detect the iOS silent switch using React Native",
+  "keywords": [
+    "react-native",
+    "ios",
+    "silent",
+    "mute",
+    "sound",
+    "switch"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gnestor/react-native-silent-switch"
+  },
+  "author": "Grant Nestor (grantnestor@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gnestor/react-native-silent-switch/issues"
+  },
+  "homepage": "https://github.com/gnestor/react-native-silent-switch"
+}
