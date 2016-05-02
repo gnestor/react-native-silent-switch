@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/gnestor/react-native-silent-switch/issues"
   },
-  "homepage": "https://github.com/gnestor/react-native-silent-switch"
+  "homepage": "https://github.com/gnestor/react-native-silent-switch",
+  "peerDependencies": {
+    "react-native": ">=0.24"
+  },
+  "rnpm": {
+    "assets": ["mute.caf"]
+  }
 }
