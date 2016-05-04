@@ -21,7 +21,9 @@ Detect the iOS silent switch using React Native
 
 ```js
 import SilentSwitch from 'react-native-silent-switch'
+```
 
+```js
 componentDidMount() {
   // Listen for silent switch toggle events
   SilentSwitch.addEventListener(silent => {
@@ -31,6 +33,57 @@ componentDidMount() {
 }
 
 componentWillUnmount() {
- SilentSwitch.removeEventListener()
+  SilentSwitch.removeEventListener()
+}
+```
+
+## Usage with [react-native-statusbar-alert](https://github.com/gnestor/react-native-statusbar-alert)
+
+```js
+import SilentSwitch from 'react-native-silent-switch'
+import StatusBarAlert from 'react-native-statusbar-alert'
+```
+
+```js
+componentDidMount() {
+  SilentSwitch.addEventListener(silent => {
+    if (silent) {
+      this.setState({
+        alerts: [{
+          message: 'Silent Switch ON',
+          onPress: () => this.navigator.push({id: 'SilentAlert'})
+        }, ...this.state.alerts]
+      })
+    } else {
+      this.setState({
+        alerts: this.state.alerts.filter(alert => alert.message !== 'Silent Switch ON')
+      })
+    }
+  })
+}
+
+componentWillUnmount() {
+  SilentSwitch.removeEventListener()
+}
+
+render() {
+  return (
+    <View style={styles.container}>
+      <StatusBarAlert
+        visible={this.state.alerts.length > 0}
+        {...this.state.alerts[0]}
+      />
+      <Navigator
+        initialRoute={initialRoute}
+        renderScene={this.renderScene}
+        navigationBar={
+          <Navigator.NavigationBar
+            routeMapper={routeMapper}
+            style={{top: -20}}
+          />
+        }
+      />
+    </View>
+  )
 }
 ```
