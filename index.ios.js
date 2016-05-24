@@ -1,4 +1,5 @@
-import React, {NativeAppEventEmitter, NativeModules} from 'react-native'
+import React from 'react'
+import {NativeAppEventEmitter, NativeModules} from 'react-native'
 const {SilentSwitch} = NativeModules
 
 let eventListener = null
