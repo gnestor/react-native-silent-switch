@@ -1,6 +1,6 @@
 {
   "name": "react-native-silent-switch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Detect the iOS silent switch using React Native",
   "keywords": [
     "react-native",
@@ -21,10 +21,12 @@
   },
   "homepage": "https://github.com/gnestor/react-native-silent-switch",
   "peerDependencies": {
-    "react": "15.0.2",
-    "react-native": "^0.26"
+    "react": ">=15",
+    "react-native": ">=0.26"
   },
   "rnpm": {
-    "assets": ["mute.caf"]
+    "assets": [
+      "mute.caf"
+    ]
   }
 }
