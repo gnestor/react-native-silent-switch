@@ -1,5 +1,5 @@
 #import "RCTSilentSwitch.h"
-#import "RCTEventDispatcher.h"
+#import <React/RCTEventDispatcher.h>
 
 @implementation RCTSilentSwitch
 
