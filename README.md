@@ -7,7 +7,7 @@ Detect the iOS silent switch using React Native
 ### Using [rnpm](https://github.com/rnpm/rnpm)
 
 * Install: `rnpm install react-native-silent-switch`
-* Add `mute.caf` from the library to your project bundle
+* Add `mute.aiff` from the library to your project bundle
   * Project Navigator > [YOUR PROJECT NAME] > Build Phases > Copy Bundle Resources
 * Verify that `$(SRCROOT)/../../node_modules/react-native/React` is in the library's header search paths for both Debug and Release schemes
     * Project Navigator > RCTSilentSwitch.xcodeproj > Build Settings > Header Search Paths > Debug AND Release
@@ -16,7 +16,7 @@ Detect the iOS silent switch using React Native
 
 * Install: `npm install react-native-silent-switch --save`
 * Link library in Xcode: See [React Native guide](https://facebook.github.io/react-native/docs/linking-libraries-ios.html)
-* Add `mute.caf` from the library to your project bundle
+* Add `mute.aiff` from the library to your project bundle
   * Project Navigator > [YOUR PROJECT NAME] > Build Phases > Copy Bundle Resources
 * Verify that `$(SRCROOT)/../../node_modules/react-native/React` is in the library's header search paths for both Debug and Release schemes
   * Project Navigator > RCTSilentSwitch.xcodeproj > Build Settings > Header Search Paths > Debug AND Release
