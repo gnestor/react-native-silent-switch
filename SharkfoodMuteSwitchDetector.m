@@ -73,7 +73,7 @@ void SharkfoodSoundMuteNotificationCompletionProc(SystemSoundID  ssID,void* clie
 -(id)init{
     self = [super init];
     if (self){
-        NSURL* url = [[NSBundle mainBundle] URLForResource:@"mute" withExtension:@"caf"];
+        NSURL* url = [[NSBundle mainBundle] URLForResource:@"mute" withExtension:@"aiff"];
         if (AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &_soundId) == kAudioServicesNoError){
             AudioServicesAddSystemSoundCompletion(self.soundId, CFRunLoopGetMain(), kCFRunLoopDefaultMode, SharkfoodSoundMuteNotificationCompletionProc,(__bridge void *)(self));
             UInt32 yes = 1;
